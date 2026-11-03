@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRP LMS - Contact Us</title>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- 1. NAVIGATION BAR -->
+    <header>
+        <nav>
+            <div class="logo-container">
+             <img src="https://res.cloudinary.com/dwh7w9kz1/image/upload/v1793204894/irp_lms_navbar_icon_rc0f9k.png" alt="Logo" class="logo-icon">
+                <span class="logo-text">IRP LMS</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+            <button class="signin-button">Sign In</button>
+        </nav>
+    </header>
+
+    <!-- 2. CONTACT HERO BANNER -->
+    <section class="contact-hero">
+        <div class="hero-content">
+            <p class="hero-tagline">GET IN TOUCH</p>
+            <h1 class="hero-title">Contact Us</h1>
+            <p class="hero-description">
+                We're here to help! Whether you have a question, feedback, <br>
+                or just want to say hello — reach out to us.
+            </p>
+        </div>
+        <div class="contact-hero-graphic">
+            <!-- Mock vector illustration of a laptop, letters, envelope and plant -->
+            <img src="https://r2.dev" onerror="this.src='https://unsplash.com'" alt="Contact Banner Graphic">
+        </div>
+    </section>
+
+    <!-- 3. CONTACT FORM & INFO CONTENT SECTION -->
+    <section class="contact-content-section">
+        <div class="contact-container">
+            
+            <!-- Left Panel: Info Cards block container -->
+            <div class="info-sidebar">
+                <h2>Get in Touch</h2>
+                <p class="sidebar-intro">We'd love to hear from you! Fill out the form and our team will get back to you as soon as possible.</p>
+                
+                <div class="info-block">
+                    <span class="block-label">Email Us</span>
+                    <a href="mailto:support@irplms.com" class="block-value">support@irplms.com</a>
+                </div>
+
+                <div class="info-block">
+                    <span class="block-label">Call Us</span>
+                    <a href="tel:+919876543210" class="block-value">+91 98765 43210</a>
+                </div>
+
+                <div class="info-block">
+                    <span class="block-label">Our Office</span>
+                    <p class="block-text">123, Tech Park, 2nd Floor,<br>Bangalore, Karnataka - 560001</p>
+                </div>
+            </div>
+
+            <!-- Right Panel: Message Submission Form block container -->
+            <div class="form-wrapper">
+                <h2>Send Us a Message</h2>
+                <p class="form-intro">We'll get back to you within 24 hours.</p>
+
+                <form class="message-form" action="#" method="POST">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="fullname">Full Name *</label>
+                            <input type="text" id="fullname" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" placeholder="Enter your email address" required>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" required>
+                            <option value="" disabled selected>Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="billing">Billing / Enrollment</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" rows="5" placeholder="Type your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-message-btn">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
