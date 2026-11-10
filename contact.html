@@ -3,107 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IRP LMS - Contact Us</title>
-    <link href="https://googleapis.com" rel="stylesheet">
+    <meta name="description" content="Contact the IRP LMS team for course and learning support.">
+    <title>IRP LMS | Contact Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    <!-- 1. NAVIGATION BAR -->
-    <header>
-        <nav>
-            <div class="logo-container">
-             <img src="https://res.cloudinary.com/dwh7w9kz1/image/upload/v1793204894/irp_lms_navbar_icon_rc0f9k.png" alt="Logo" class="logo-icon">
-                <span class="logo-text">IRP LMS</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="contact.html" class="active">Contact Us</a></li>
-            </ul>
-            <button class="signin-button">Sign In</button>
-        </nav>
-    </header>
+   <header class="site-header">
+    <nav class="navbar">
 
-    <!-- 2. CONTACT HERO BANNER -->
-    <section class="contact-hero">
-        <div class="hero-content">
-            <p class="hero-tagline">GET IN TOUCH</p>
-            <h1 class="hero-title">Contact Us</h1>
-            <p class="hero-description">
-                We're here to help! Whether you have a question, feedback, <br>
-                or just want to say hello — reach out to us.
-            </p>
-        </div>
-        <div class="contact-hero-graphic">
-            <!-- Mock vector illustration of a laptop, letters, envelope and plant -->
-            <img src="https://r2.dev" onerror="this.src='https://unsplash.com'" alt="Contact Banner Graphic">
-        </div>
-    </section>
+        <a href="index.html" class="logo-container">
+            <img
+                src="https://res.cloudinary.com/dwh7w9kz1/image/upload/v1793204894/irp_lms_navbar_icon_rc0f9k.png"
+                alt="IRP LMS Logo"
+                class="logo-icon"
+            >
+            <span class="logo-text">IRP LMS</span>
+        </a>
 
-    <!-- 3. CONTACT FORM & INFO CONTENT SECTION -->
-    <section class="contact-content-section">
-        <div class="contact-container">
-            
-            <!-- Left Panel: Info Cards block container -->
-            <div class="info-sidebar">
-                <h2>Get in Touch</h2>
-                <p class="sidebar-intro">We'd love to hear from you! Fill out the form and our team will get back to you as soon as possible.</p>
-                
-                <div class="info-block">
-                    <span class="block-label">Email Us</span>
-                    <a href="mailto:support@irplms.com" class="block-value">support@irplms.com</a>
-                </div>
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-                <div class="info-block">
-                    <span class="block-label">Call Us</span>
-                    <a href="tel:+919876543210" class="block-value">+91 98765 43210</a>
-                </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
 
-                <div class="info-block">
-                    <span class="block-label">Our Office</span>
-                    <p class="block-text">123, Tech Park, 2nd Floor,<br>Bangalore, Karnataka - 560001</p>
-                </div>
+        <a href="contact.html#contact-form" class="signin-button">
+            Sign In
+        </a>
+
+    </nav>
+</header>
+
+    <main>
+
+        <!-- Contact Hero -->
+        <section class="contact-hero">
+
+            <div class="hero-content">
+                <p class="hero-tagline">WE'RE HERE TO HELP</p>
+
+                <h1 class="hero-title">
+                    Get in <span class="highlight-text">Touch</span>
+                </h1>
+
+                <p class="hero-description">
+                    Have a question about a course or your learning journey?
+                    Send us a message and our team will be happy to help.
+                </p>
             </div>
 
-            <!-- Right Panel: Message Submission Form block container -->
-            <div class="form-wrapper">
-                <h2>Send Us a Message</h2>
-                <p class="form-intro">We'll get back to you within 24 hours.</p>
+            <div class="contact-hero-graphic" aria-hidden="true">
+                <div class="contact-graphic-card">
+                    <span class="graphic-icon">✉</span>
+                    <strong>Let's talk</strong>
+                    <span>We're ready to help you learn.</span>
+                </div>
+            </div>
 
-                <form class="message-form" action="#" method="POST">
-                    <div class="form-row">
-                        <div class="input-group">
-                            <label for="fullname">Full Name *</label>
-                            <input type="text" id="fullname" placeholder="Enter your full name" required>
+        </section>
+
+        <!-- Contact Details and Form -->
+        <section class="contact-content-section">
+
+            <div class="contact-container">
+
+                <aside class="info-sidebar">
+
+                    <p class="section-eyebrow">CONTACT DETAILS</p>
+                    <h2>Let's connect</h2>
+
+                    <p class="sidebar-intro">
+                        Reach out to us for course information,
+                        technical support or general questions.
+                    </p>
+
+                    <div class="contact-detail">
+                        <span class="detail-icon">✉</span>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:support@irplms.com">support@irplms.com</a>
                         </div>
-                        <div class="input-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" placeholder="Enter your email address" required>
+                    </div>
+
+                    <div class="contact-detail">
+                        <span class="detail-icon">☎</span>
+                        <div>
+                            <h3>Phone</h3>
+                            <a href="tel:+919876543210">+91 98765 43210</a>
                         </div>
                     </div>
 
-                    <div class="input-group">
-                        <label for="subject">Subject *</label>
-                        <select id="subject" required>
-                            <option value="" disabled selected>Select a subject</option>
-                            <option value="general">General Inquiry</option>
-                            <option value="technical">Technical Support</option>
-                            <option value="billing">Billing / Enrollment</option>
-                        </select>
+                    <div class="contact-detail">
+                        <span class="detail-icon">⌖</span>
+                        <div>
+                            <h3>Office</h3>
+                            <p>123 Tech Park, Bangalore, India</p>
+                        </div>
                     </div>
 
-                    <div class="input-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" rows="5" placeholder="Type your message here..." required></textarea>
-                    </div>
+                </aside>
 
-                    <button type="submit" class="submit-message-btn">Send Message</button>
-                </form>
+                <div class="form-wrapper" id="contact-form">
+
+                    <p class="section-eyebrow">SEND US A MESSAGE</p>
+                    <h2>How can we help?</h2>
+
+                    <p class="form-intro">
+                        Fill in the details below. Your email application
+                        will open with your message ready to send.
+                    </p>
+
+                    <form id="contact-message-form">
+
+                        <div class="form-row">
+
+                            <div class="input-group">
+                                <label for="name">Full Name</label>
+                                <input type="text"
+                                       id="name"
+                                       name="name"
+                                       placeholder="Enter your name"
+                                       required
+                                       minlength="2"
+                                       autocomplete="name">
+                            </div>
+
+                            <div class="input-group">
+                                <label for="email">Email Address</label>
+                                <input type="email"
+                                       id="email"
+                                       name="email"
+                                       placeholder="Enter your email"
+                                       required
+                                       autocomplete="email">
+                            </div>
+
+                        </div>
+
+                        <div class="input-group">
+                            <label for="subject">Subject</label>
+                            <input type="text"
+                                   id="subject"
+                                   name="subject"
+                                   placeholder="What is your message about?"
+                                   required
+                                   minlength="3">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="message">Message</label>
+                            <textarea id="message"
+                                      name="message"
+                                      rows="5"
+                                      placeholder="Write your message here..."
+                                      required
+                                      minlength="10"></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-message-btn">
+                            Prepare Email →
+                        </button>
+
+                        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+
+                    </form>
+
+                    <p class="form-note">
+                        Note: This static website does not store or send messages to a server.
+                    </p>
+
+                </div>
+
             </div>
 
-        </div>
-    </section>
+        </section>
 
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span class="current-year"></span> IRP LMS. Learn • Build • Get Placed.</p>
+        <a href="course.html">Explore Courses</a>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

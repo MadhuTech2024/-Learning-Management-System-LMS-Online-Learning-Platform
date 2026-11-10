@@ -3,207 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IRP LMS - Courses</title>
-    <link href="https://googleapis.com" rel="stylesheet">
+    <meta name="description" content="Explore IRP LMS video courses in web development, programming and backend technologies.">
+    <title>IRP LMS | Courses</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    <!-- 1. NAVIGATION BAR -->
-    <header>
-        <nav>
-            <div class="logo-container">
-                    <img src="https://res.cloudinary.com/dwh7w9kz1/image/upload/v1793204894/irp_lms_navbar_icon_rc0f9k.png" alt="Logo" class="logo-icon">
-                <span class="logo-text">IRP LMS</span>
+   <header class="site-header">
+    <nav class="navbar">
+
+        <a href="index.html" class="logo-container">
+            <img
+                src="https://res.cloudinary.com/dwh7w9kz1/image/upload/v1793204894/irp_lms_navbar_icon_rc0f9k.png"
+                alt="IRP LMS Logo"
+                class="logo-icon"
+            >
+            <span class="logo-text">IRP LMS</span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <a href="contact.html#contact-form" class="signin-button">
+            Sign In
+        </a>
+
+    </nav>
+</header>
+    <main>
+
+        <!-- Courses Hero -->
+        <section class="courses-hero">
+            <div class="hero-content">
+
+                <p class="hero-tagline">OUR COURSES</p>
+
+                <h1 class="hero-title">
+                    Learn by Watching
+                    <span class="highlight-text">Video Tutorials</span>
+                </h1>
+
+                <p class="hero-description">
+                    Watch video lessons, learn at your own pace,
+                    and build practical skills from anywhere.
+                </p>
+
+                <a href="#course-list" class="cta-button">
+                    Start Learning ↓
+                </a>
+
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html" class="active">Courses</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <button class="signin-button">Sign In</button>
-        </nav>
-    </header>
+        </section>
 
-    <!-- 2. COURSES HERO BANNER -->
-    <section class="courses-hero">
-        <div class="hero-content">
-            <p class="hero-tagline">OUR COURSES</p>
-            <h1 class="hero-title">Learn by Watching <br><span class="highlight-text">Video Tutorials</span></h1>
-            <p class="hero-description">
-                Watch high-quality video lessons for each course. Learn at your own pace, <br>
-                from anywhere, and build real-world skills.
-            </p>
-        </div>
-    </section>
+        <!-- Courses Section -->
+        <section class="courses-section" id="course-list">
 
-    <!-- 3. LIVE ANCHOR-LINKED VIDEO GRID SECTION -->
-    <section class="courses-section">
-        <div class="courses-grid">
-            
-            <!-- Card 1: HTML -->
-            <a href="https://www.youtube.com/embed/qz0aGYrrlhU" target="_blank" class="course-card-link">
-                <div class="course-card">
+            <div class="section-heading">
+                <p class="section-eyebrow">LEARN AT YOUR OWN PACE</p>
+                <h2 class="section-title">Explore Our Courses</h2>
+                <p class="section-subtitle">
+                    Choose a topic and start learning with video tutorials.
+                </p>
+            </div>
+
+            <!-- Search -->
+            <div class="course-toolbar">
+                <label class="search-box">
+                    <span class="visually-hidden">Search courses</span>
+                    <input type="search"
+                           id="course-search"
+                           placeholder="Search courses..."
+                           autocomplete="off">
+                </label>
+
+                <p class="course-count" id="course-count" aria-live="polite">
+                    Showing 9 courses
+                </p>
+            </div>
+
+            <!-- Course Cards -->
+            <div class="courses-grid">
+
+                <article class="course-card" data-course="html">
                     <div class="video-wrapper">
-                        <video controls preload="metadata" poster="https://www.youtube.com/embed/qz0aGYrrlhU">
-                            <source src="https://www.youtube.com/embed/qz0aGYrrlhU" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe src="https://www.youtube-nocookie.com/embed/qz0aGYrrlhU"
+                                title="HTML Crash Course"
+                                loading="lazy"
+                                allowfullscreen></iframe>
                     </div>
                     <div class="course-info">
+                        <span class="course-category">Frontend</span>
                         <h3>HTML Crash Course</h3>
-                        <p>Learn the structural fundamentals of HTML, and build your first clean semantic web page.</p>
+                        <p>Learn HTML fundamentals and build clean semantic web pages.</p>
                     </div>
-                </div>
-            </a>
+                </article>
 
-            <!-- Card 2: CSS -->
-            <a href="https://www.youtube.com/embed/c26O1N3x6ug" target="_blank" class="course-card-link">
-                <div class="course-card">
+                <article class="course-card" data-course="css">
                     <div class="video-wrapper">
-                        <video controls preload="metadata" poster="https://www.youtube.com/embed/c26O1N3x6ug">
-                            <source src="https://www.youtube.com/embed/c26O1N3x6ug" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe src="https://www.youtube-nocookie.com/embed/c26O1N3x6ug"
+                                title="CSS Layout Styles"
+                                loading="lazy"
+                                allowfullscreen></iframe>
                     </div>
                     <div class="course-info">
+                        <span class="course-category">Frontend</span>
                         <h3>CSS Layout Styles</h3>
-                        <p>Build flexible columns with CSS Grid, responsive Flexbox blocks, and clean layout rules.</p>
+                        <p>Build flexible layouts with CSS Grid, responsive Flexbox and clean styling.</p>
                     </div>
-                </div>
-            </a>
+                </article>
 
-            <!-- Card 3: JavaScript -->
-            <a href="https://www.youtube.com/embed/EenvvRCcVl4" target="_blank" class="course-card-link">
-                <div class="course-card">
+                <article class="course-card" data-course="javascript">
                     <div class="video-wrapper">
-                        <video controls preload="metadata" poster="https://www.youtube.com/embed/EenvvRCcVl4">
-                            <source src="https://www.youtube.com/embed/EenvvRCcVl4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe src="https://www.youtube-nocookie.com/embed/EenvvRCcVl4"
+                                title="JavaScript Crash Course"
+                                loading="lazy"
+                                allowfullscreen></iframe>
                     </div>
                     <div class="course-info">
+                        <span class="course-category">Frontend</span>
                         <h3>JavaScript Crash Course</h3>
-                        <p>Add rich interactivity, array data structures, dynamic actions, and custom DOM handling loops.</p>
+                        <p>Learn programming fundamentals, arrays, functions and DOM handling.</p>
                     </div>
-                </div>
-            </a>
+                </article>
 
-            <!-- Card 4: React -->
-            <a href="https://www.youtube.com/embed/pBFWFswUK2c" target="_blank" class="course-card-link">
-                <div class="course-card">
+                <article class="course-card" data-course="react">
                     <div class="video-wrapper">
-                        <video controls preload="metadata" poster="https://www.youtube.com/embed/pBFWFswUK2c">
-                            <source src="https://www.youtube.com/embed/pBFWFswUK2c" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe src="https://www.youtube-nocookie.com/embed/pBFWFswUK2c"
+                                title="React Crash Course"
+                                loading="lazy"
+                                allowfullscreen></iframe>
                     </div>
                     <div class="course-info">
+                        <span class="course-category">Frontend</span>
                         <h3>React Crash Course</h3>
-                        <p>Build performance-focused component modular structures using active custom state hooks.</p>
+                        <p>Build component-based interfaces using props, state and React hooks.</p>
                     </div>
-                </div>
-            </a>
+                </article>
 
-            <!-- Card 5: Python -->
-            <a href="https://www.youtube.com/embed/K5KVEU3aaeQ" target="_blank" class="course-card-link">
-                <div class="course-card">
+                <article class="course-card" data-course="python">
                     <div class="video-wrapper">
-                        <video controls preload="metadata" poster="https://www.youtube.com/embed/K5KVEU3aaeQ">
-                            <source src="https://www.youtube.com/embed/K5KVEU3aaeQ" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe src="https://www.youtube-nocookie.com/embed/K5KVEU3aaeQ"
+                                title="Python Crash Course"
+                                loading="lazy"
+                                allowfullscreen></iframe>
                     </div>
                     <div class="course-info">
+                        <span class="course-category">Programming</span>
                         <h3>Python Crash Course</h3>
-                        <p>Learn clean syntax rules, file input automation, and foundational coding logic loops.</p>
+                        <p>Learn Python syntax, data types, control flow and functions.</p>
                     </div>
-                </div>
-            </a>
+                </article>
 
-            <!-- Card 6: Java -->
-            <a href="https://www.youtube.com/embed/eIrMbAQSU34" target="_blank" class="course-card-link">
-                <div class="course-card">
+                <article class="course-card" data-course="java">
                     <div class="video-wrapper">
-                        <video controls preload="metadata" poster="https://www.youtube.com/embed/eIrMbAQSU34">
-                            <source src="https://www.youtube.com/embed/eIrMbAQSU34  " type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe src="https://www.youtube-nocookie.com/embed/eIrMbAQSU34"
+                                title="Java Crash Course"
+                                loading="lazy"
+                                allowfullscreen></iframe>
                     </div>
                     <div class="course-info">
+                        <span class="course-category">Programming</span>
                         <h3>Java Crash Course</h3>
-                        <p>Master robust object-oriented patterns, classes, encapsulation structures, and variables.</p>
+                        <p>Understand object-oriented programming, classes and core Java concepts.</p>
                     </div>
-                </div>
-            </a>
+                </article>
 
-            <!-- Card 7: Spring Boot -->
-            <a href="https://www.youtube.com/embed/gJrjgg1KVL4" target="_blank" class="course-card-link">
-                <div class="course-card">
+                <article class="course-card" data-course="spring boot">
                     <div class="video-wrapper">
-                        <video controls preload="metadata" poster="https://www.youtube.com/embed/gJrjgg1KVL4">
-                            <source src="https://www.youtube.com/embed/gJrjgg1KVL4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe src="https://www.youtube-nocookie.com/embed/gJrjgg1KVL4"
+                                title="Spring Boot Crash Course"
+                                loading="lazy"
+                                allowfullscreen></iframe>
                     </div>
                     <div class="course-info">
+                        <span class="course-category">Backend</span>
                         <h3>Spring Boot Crash Course</h3>
-                        <p>Deploy secure production-grade backend servers and map data endpoints efficiently.</p>
+                        <p>Explore Java backend development and RESTful application services.</p>
                     </div>
-                </div>
-            </a>
+                </article>
 
-            <!-- Card 8: Hibernate -->
-            <a href="https://www.youtube.com/embed/qF20cAHKrXA" target="_blank" class="course-card-link">
-                <div class="course-card">
+                <article class="course-card" data-course="hibernate">
                     <div class="video-wrapper">
-                        <video controls preload="metadata" poster="https://www.youtube.com/embed/qF20cAHKrXA">
-                            <source src="https://www.youtube.com/embed/qF20cAHKrXA" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <iframe src="https://www.youtube-nocookie.com/embed/qF20cAHKrXA"
+                                title="Hibernate Crash Course"
+                                loading="lazy"
+                                allowfullscreen></iframe>
                     </div>
                     <div class="course-info">
+                        <span class="course-category">Backend</span>
                         <h3>Hibernate Crash Course</h3>
-                        <p>Understand professional ORM frameworks and connect structural database models smoothly.</p>
+                        <p>Learn ORM fundamentals and how Java applications interact with databases.</p>
                     </div>
-                </div>
-            </a>
+                </article>
 
-            <!-- Card 9: Django -->
-            <a href="https://www.youtube.com/embed/rHux0gMZ3Eg" target="_blank" class="course-card-link">
-                <div class="course-card">
+                <article class="course-card" data-course="django">
                     <div class="video-wrapper">
-                        <video controls preload="metadata" poster="https://www.youtube.com/embed/rHux0gMZ3Eg">
-                            <source src="https://www.youtube.com/embed/rHux0gMZ3Eg" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>        
+                        <iframe src="https://www.youtube-nocookie.com/embed/rHux0gMZ3Eg"
+                                title="Django Crash Course"
+                                loading="lazy"
+                                allowfullscreen></iframe>
                     </div>
                     <div class="course-info">
+                        <span class="course-category">Backend</span>
                         <h3>Django Crash Course</h3>
-                        <p>Build secure backend web applications with Python and deploy them to production servers.</p>         
+                        <p>Build Python web applications using Django models, views and URL routing.</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <p class="no-courses" id="no-courses" hidden>
+                No courses match your search. Try another keyword.
+            </p>
+
+            <!-- Explore More -->
+            <div class="explore-more-bar">
+
+                <div class="explore-left">
+                    <div class="dots-icon" aria-hidden="true">
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                        <span></span><span></span><span></span>
+                    </div>
+
+                    <div class="explore-text">
+                        <h3>Explore More Tech Frameworks</h3>
+                        <p>Keep learning and expand your development skills.</p>
                     </div>
                 </div>
 
-            </a>
-        </div>
+                <a href="contact.html" class="view-all-btn">
+                    Request a Course →
+                </a>
 
-
-        <!-- 4. FOOTER EXPLORE BAR ROW -->
-        <div class="explore-more-bar">
-            <div class="explore-left">
-                <div class="dots-icon">
-                    <span></span><span></span><span></span>
-                    <span></span><span></span><span></span>
-                    <span></span><span></span><span></span>
-                </div>
-                <div class="explore-text">
-                    <h3>Explore More Tech Frameworks</h3>
-                    <p>Discover advanced tools like React, Django, and Spring Boot.</p>
-                </div>
             </div>
-            <button class="view-all-btn">View All Courses &rarr;</button>
-        </div>
-    </section>
 
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span class="current-year"></span> IRP LMS. Learn • Build • Get Placed.</p>
+        <a href="contact.html">Contact Us</a>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -3,80 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IRP LMS Platform</title>
-    <!-- Link to external Google Font for exact matching typography -->
-    <link href="https://googleapis.com" rel="stylesheet">
+    <meta name="description" content="IRP LMS - Learn, practice, build projects and get placed.">
+    <title>IRP LMS | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    <!-- 1. NAVIGATION BAR -->
-    <header>
-        <nav>
-            <div class="logo-container">
-                <img src="https://res.cloudinary.com/dwh7w9kz1/image/upload/v1793204894/irp_lms_navbar_icon_rc0f9k.png" alt="Logo" class="logo-icon">
-                <span class="logo-text">IRP LMS</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <button class="signin-button">Sign In</button>
-        </nav>
-    </header>
+    <header class="site-header">
+    <nav class="navbar">
 
-    <!-- 2. HERO SECTION -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <p class="hero-tagline">LEARN • BUILD • GET PLACED</p>
-            <h1 class="hero-title">Welcome to <br><span class="brand-highlight">IRP LMS</span> Platform</h1>
-            <p class="hero-description">
-                Your step-by-step learning journey to build skills, <br>
-                gain confidence and get placed in your dream job.
-            </p>
-           <a href="courses.html"><button class="cta-button">Explore Courses &rarr;</button></a>
-        </div>
-    </section>
+        <a href="index.html" class="logo-container">
+            <img
+                src="https://res.cloudinary.com/dwh7w9kz1/image/upload/v1793204894/irp_lms_navbar_icon_rc0f9k.png"
+                alt="IRP LMS Logo"
+                class="logo-icon"
+            >
+            <span class="logo-text">IRP LMS</span>
+        </a>
 
-    <!-- 3. LEARNING JOURNEY CARDS SECTION -->
-    <section class="journey-section">
-        <h2 class="section-title">Your Learning Journey</h2>
-        <p class="section-subtitle">Follow these steps to build your skills and get ready for placement.</p>
-        
-        <div class="cards-grid">
-            <!-- Card 1 -->
-            <div class="step-card">
-                <span class="step-number num-orange">1</span>
-                <h3>Learn</h3>
-                <p>Take structured courses and build concepts.</p>
-            </div>
-            <!-- Card 2 -->
-            <div class="step-card">
-                <span class="step-number num-yellow">2</span>
-                <h3>Practice</h3>
-                <p>Solve problems and improve your skills.</p>
-            </div>
-            <!-- Card 3 -->
-            <div class="step-card">
-                <span class="step-number num-blue">3</span>
-                <h3>Build Projects</h3>
-                <p>Work on real-world projects for your portfolio.</p>
-            </div>
-            <!-- Card 4 -->
-            <div class="step-card">
-                <span class="step-number num-indigo">4</span>
-                <h3>Prepare</h3>
-                <p>Get interview ready with mock sessions and guidance.</p>
-            </div>
-            <!-- Card 5 -->
-            <div class="step-card">
-                <span class="step-number num-darkblue">5</span>
-                <h3>Get Placed</h3>
-                <p>Apply to drives and achieve your career goals</p>
-            </div>
-        </div>
-    </section>
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+
+        <a href="contact.html#contact-form" class="signin-button">
+            Sign In
+        </a>
+
+    </nav>
+</header>
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+
+                <p class="hero-tagline">
+                    LEARN <span>•</span> BUILD <span>•</span> GET PLACED
+                </p>
+
+                <h1 class="hero-title">
+                    Welcome to
+                    <span class="brand-highlight">IRP LMS</span>
+                    Platform
+                </h1>
+
+                <p class="hero-description">
+                    Your step-by-step learning journey to build skills,
+                    gain confidence and get placed in your dream job.
+                </p>
+
+                <a href="course.html" class="cta-button">
+                    Explore Courses <span>→</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Learning Journey -->
+        <section class="journey-section" id="learning-journey">
+
+            <div class="section-heading">
+                <p class="section-eyebrow">YOUR PATH TO SUCCESS</p>
+                <h2 class="section-title">Your Learning Journey</h2>
+                <p class="section-subtitle">
+                    Follow these steps to build your skills and get ready for placement.
+                </p>
+            </div>
+
+            <div class="cards-grid">
+
+                <article class="step-card">
+                    <span class="step-number num-orange">1</span>
+                    <h3>Learn</h3>
+                    <p>Take structured courses and build strong concepts.</p>
+                </article>
+
+                <article class="step-card">
+                    <span class="step-number num-yellow">2</span>
+                    <h3>Practice</h3>
+                    <p>Solve problems and improve your technical skills.</p>
+                </article>
+
+                <article class="step-card">
+                    <span class="step-number num-blue">3</span>
+                    <h3>Build Projects</h3>
+                    <p>Work on real-world projects for your portfolio.</p>
+                </article>
+
+                <article class="step-card">
+                    <span class="step-number num-indigo">4</span>
+                    <h3>Prepare</h3>
+                    <p>Get interview-ready with practice and guidance.</p>
+                </article>
+
+                <article class="step-card">
+                    <span class="step-number num-darkblue">5</span>
+                    <h3>Get Placed</h3>
+                    <p>Apply to opportunities and achieve your career goals.</p>
+                </article>
+
+            </div>
+
+            <div class="journey-cta">
+                <p>Ready to begin your learning journey?</p>
+                <a href="course.html" class="text-link">
+                    Browse all courses →
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span class="current-year"></span> IRP LMS. Learn • Build • Get Placed.</p>
+        <a href="contact.html">Contact Us</a>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
